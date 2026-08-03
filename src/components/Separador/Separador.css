@@ -1,0 +1,25 @@
+.separador {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 12em;
+    margin: 5em 0;
+    width: 100%;
+}
+
+.separador__layout {
+    height: 100%;
+    background-color: #242f48cf;
+}
+
+#inicio {
+    background-image: url(../../assets/img/separadores/separador1.jpg);
+}
+
+#sobre-nosotros {
+    background-image: url(../../assets/img/separadores/separador2.jpg);
+}
+
+#torneos {
+    background-image: url(../../assets/img/separadores/separador3.jpg);
+}
