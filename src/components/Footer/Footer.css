@@ -1,0 +1,49 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    height: 10em;
+    background-color: #192944;
+    margin-top: 5em;
+}
+
+.footer__redes-container {
+    display: flex;
+    gap: 1em;
+}
+
+.footer__img {
+    height: 3em;
+}
+
+.footer__copy-container {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+@media (max-width: 48rem) {
+    .footer {
+        height: auto;
+        padding: 2.5rem 1rem;
+        gap: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .footer__redes-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.2rem;
+    }
+
+    .footer__img {
+        height: 2.5rem;
+    }
+
+    .footer__copy-container p {
+        font-size: 1rem;
+        text-align: center;
+    }
+} 
+
