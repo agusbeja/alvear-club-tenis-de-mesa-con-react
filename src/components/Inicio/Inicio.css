@@ -1,0 +1,46 @@
+.inicio__container {
+    margin: 2em auto;
+    padding: 2em;
+    width: 90%;
+    max-width: 56.25rem; /* Equivalente a 900px */
+    border-radius: 1em;
+    box-shadow: 0 0 2em rgba(255, 255, 255, 0.25);
+    border: 0.0625em solid #000;
+}
+
+.inicio__title {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 0.75em;
+    text-align: center;
+}
+
+.inicio__text {
+    text-wrap: pretty;
+    text-align: justify;
+    color: #fff;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.inicio__text:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 48rem) {
+    .inicio__container {
+        padding: 1.5em;
+        margin: 1.5em auto;
+    }
+
+    .inicio__title {
+        font-size: 1.6rem;
+    }
+
+    .inicio__text {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+}

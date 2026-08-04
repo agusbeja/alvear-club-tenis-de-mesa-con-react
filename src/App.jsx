@@ -1,5 +1,6 @@
 import './App.css'
 import './index.css'
+import { Inicio } from './components/Inicio/Inicio'
 import { Separador } from './components/Separador/Separador'
 import { Header } from './components/Header/Header'
 import { NavBar } from './components/NavBar/NavBar'
@@ -13,6 +14,7 @@ function App() {
     <Header />
     <NavBar />
     <Separador id="inicio" />
+    <Inicio />
     <Separador id="sobre-nosotros" />
     <Separador id="torneos" />
     <Footer />
