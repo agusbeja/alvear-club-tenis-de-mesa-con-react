@@ -30,7 +30,7 @@ export function NavBar() {
                 <li className="nav__item"><a href="#sobre-nosotros" className="nav__link" onClick={handleCloseMenu}>Sobre Nosotros</a></li>
                 <li className="nav__item"><a href="#torneos" className="nav__link" onClick={handleCloseMenu}>Torneos</a></li>
                 <li className="nav__item"><a href="https://www.tenisdemesaparatodos.com/clubes_ampliar.asp?codigo=16"
-                    className="nav__link" target="_blank" onClick={handleCloseMenu}>TMT</a></li>
+                    className="nav__link" target="_blank" rel="noopener noreferrer" onClick={handleCloseMenu}>TMT</a></li>
                 <li className="nav__item"><button className="nav__link link--login" onClick={handleLoginClick}>Iniciar
                     Sesión</button></li>
             </ul>

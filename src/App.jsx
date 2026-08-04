@@ -6,6 +6,7 @@ import { Header } from './components/Header/Header'
 import { NavBar } from './components/NavBar/NavBar'
 import { Footer } from './components/Footer/Footer'
 import { SobreNosotros } from './components/SobreNosotros/SobreNosotros'
+import { Torneos } from './components/Torneos/Torneos'
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
     <Separador id="sobre-nosotros" />
     <SobreNosotros />
     <Separador id="torneos" />
+    <Torneos />
     <Footer />
   </>)
 }

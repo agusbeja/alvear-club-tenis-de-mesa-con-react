@@ -24,69 +24,70 @@ export function SobreNosotros() {
                 <h3 className="sobre-nosotros__h3">
                 Entrenadores
                 </h3>
-                <div className="sobre-nosotros__content"><p className="sobre-nosotros__text">
+                <div className="sobre-nosotros__content">
+                    <p className="sobre-nosotros__text">
                     Diego Temperley - Leandro Yamamoto - Nicolas Gibo
-                </p></div>
-                
-                
+                    </p>
+                </div>
             </div>
             <div className="sobre-nosotros__group">
                 <h3 className="sobre-nosotros__h3">
                     Contacto
                 </h3>
-                <div className="sobre-nosotros__content"><p className="sobre-nosotros__text">
-                    Leandro Yamamoto: 1531233776 | Yamamotoleandrok@gmail.com
-                </p>
-                <p className="sobre-nosotros__text">
-                    Miguel Marcelo Badui: 1151770384 | marcelobadui@gmail.com
-                </p></div>
-                
-                
+                <div className="sobre-nosotros__content">
+                    <p className="sobre-nosotros__text">
+                        Leandro Yamamoto: 1531233776 | Yamamotoleandrok@gmail.com
+                    </p>
+                    <p className="sobre-nosotros__text">
+                        Miguel Marcelo Badui: 1151770384 | marcelobadui@gmail.com
+                    </p>
+                </div>
             </div>
             <div className="sobre-nosotros__group">
                 <h3 className="sobre-nosotros__h3">
                 Horarios
                 </h3>
-                <div className="sobre-nosotros__content"><p className="sobre-nosotros__text">
-                    Principiantes y aficionados: Miércoles y Viernes: 16 a 18hs / 18 a 20hs / 20 a 22hs
-                </p>
-                <p className="sobre-nosotros__text">
-                    Federados: Lunes, Martes y jueves: 16:30 a 21hs
-                </p></div>
-                
-                
+                <div className="sobre-nosotros__content">
+                    <p className="sobre-nosotros__text">
+                        Principiantes y aficionados: Miércoles y Viernes: 16 a 18hs / 18 a 20hs / 20 a 22hs
+                    </p>
+                    <p className="sobre-nosotros__text">
+                        Federados: Lunes, Martes y jueves: 16:30 a 21hs
+                    </p>
+                </div>
             </div>
             <div className="sobre-nosotros__group">
                 <h3 className="sobre-nosotros__h3">
                     Mesas
                 </h3>
-                <div className="sobre-nosotros__content"><p className="sobre-nosotros__text">
-                    8 Mesas (3 DHS y 5 Almar C-25)
-                </p></div>
-                
-                
+                <div className="sobre-nosotros__content">
+                    <p className="sobre-nosotros__text">
+                        8 Mesas (3 DHS y 5 Almar C-25)
+                    </p>
+                </div>
             </div>
             <div className="sobre-nosotros__group">
                 <h3 className="sobre-nosotros__h3">
                     Asociación
                 </h3>
-                <div className="sobre-nosotros__content"><p className="sobre-nosotros__text">
-                    <a href="https://www.fetemba.org.ar/" target="_blank" rel="noopener noreferrer" className='sobre-nosotros__link'>
+                <div className="sobre-nosotros__content">
+                    <p className="sobre-nosotros__text">
+                        <a href="https://www.fetemba.org.ar/" target="_blank" rel="noopener noreferrer" className='sobre-nosotros__link'>
                         <img src={fetembaLogo} alt="fetemba" className="fetemba-logo"/>
                         FeTeMBA
-                    </a>
-                </p></div>
-                
-                
+                        </a>
+                    </p>
+                </div>
             </div>
             <div className="sobre-nosotros__group sobre-nosotros__group--full">
                 <h3 className="sobre-nosotros__h3">
-                    Como llegar
+                    Cómo llegar
                 </h3>
-                <div className="sobre-nosotros__content"><p className="sobre-nosotros__text">
-                    Nuestro club está situado en la Calle J. E Rodo 4190, a dos cuadras de la Av. Juan B. Alberdi, una de Av. Directorio y seis cuadras de la Av. Rivadavia. Algunas de las líneas de colectivos que te acercan al Club son: 114, 182, 92, 55, 5, 104, 4, 126, 107, 36.
-                </p></div>
-                
+                <div className="sobre-nosotros__content">
+                    <p className="sobre-nosotros__text">
+                        Nuestro club está situado en la Calle J. E Rodo 4190, a dos cuadras de la Av. Juan B. Alberdi, una de Av. Directorio y seis cuadras de la Av. Rivadavia. Algunas de las líneas de colectivos que te acercan al Club son: 114, 182, 92, 55, 5, 104, 4, 126, 107, 36.
+                    </p>
+                </div>
             </div>
         </section>
     )

@@ -22,12 +22,11 @@ header {
 }
 
 .header__title {
-    font-family: serif;
     font-size: clamp(2.2rem, 5vw, 3.8rem);
     font-weight: 800;                 
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    
     line-height: 1.2;
     margin: 0 auto;
     filter: drop-shadow(0 4px 15px rgba(255, 255, 255, 0.4));

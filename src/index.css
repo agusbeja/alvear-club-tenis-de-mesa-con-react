@@ -5,6 +5,11 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #242f48;
     display: flex;
@@ -12,27 +17,44 @@ body {
     min-height: 100vh;     
 }
 
-html {
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-}
-
 main {
     flex: 1;
 }
 
+/* Manejo defensivo de imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Manejo defensivo de texto */
 a {
     text-decoration: none; 
-    color: inherit;        
+    color: inherit;     
+    overflow-wrap: anywhere;    
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: serif;
+    letter-spacing: 0.05em;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
+p {
+    overflow-wrap: anywhere;
+}
 
-/* ----------SCROLLBAR START-------*/
+/* ---------- SCROLLBAR ---------- */
 
+/* Estándar (Firefox y navegadores modernos) */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #0f1838;
+}
+
+/* Webkit (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
     width: 0.75em;
 }
@@ -55,14 +77,10 @@ h1, h2, h3, h4, h5, h6 {
     background: #ffffff;
 }
 
-* {
-    scrollbar-width: thin;
-    scrollbar-color: #ffffff #0f1838;
-}
+/* ---------- MEDIA QUERIES ---------- */
 
-/* ----------SCROLLBAR END-------*/
-
-@media (max-width: 48) {
+/* Corregido: se agregaron los rems */
+@media (max-width: 48rem) {
     html {
         font-size: 14px;
     }
