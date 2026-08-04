@@ -1,0 +1,172 @@
+.login__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: #ffffff;
+    background: #192944; 
+    box-shadow: 0 0 1.875rem rgba(99, 94, 116);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    width: auto;
+    gap: 2rem;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto; 
+    width: min(90%, 60rem);
+}
+
+.login__escudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+}
+
+.login__parrafo {
+    font-size: clamp(1rem, 5vw, 1.5rem);
+    font-weight: 700; 
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: serif;
+    letter-spacing: 0.1em;
+    filter: drop-shadow(0 4px 15px rgba(255, 255, 255, 0.4));
+}
+
+.login__escudo img {
+    width: 12rem;
+    height: auto;
+    filter: drop-shadow(0 0 1rem rgb(99, 94, 116, 0.4));
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.login__label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #cbd5e0;
+}
+
+.login__input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+    border: 0.125rem solid #2d3748;
+    background: #242f48;
+    color: white;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.login__input:focus {
+    border-color: #4facfe;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.2);
+}
+
+.login__register-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    gap: 0.8rem;
+}
+
+.login__register-button {
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.login__register-button:last-child {
+    background-color: #4facfe;
+    color: white;
+}
+
+.login__register-button:last-child:hover {
+    background-color: #3b82f6;
+    transform: translateY(-0.125rem); 
+}
+
+.login__register-button:first-child {
+    background-color: transparent;
+    color: #cbd5e0;
+    border: 0.0625rem solid #cbd5e0; 
+}
+
+.login__register-button:first-child:hover {
+    background-color: #ffffff10;
+}
+
+.login__password-container {
+    position: relative;
+}
+
+#togglePassword {
+    position: absolute; 
+    right: 0.625em; 
+    top: 1.2em; 
+    border: none; 
+    background: none; 
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.login__close-button {
+    color: #fff;
+    position: absolute;
+    top: 0.5em;
+    right: 1em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.login__close-button:hover {
+    color: #4facfe; 
+    transform: scale(1.1);
+}
+
+.login__register-button:active,
+.login__close-button:active {
+    transform: scale(0.97);
+}
+
+
+
+@media (max-width: 48em) {
+    .login__card {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .login__escudo img {
+        height: 4em;
+        width: auto;
+    }
+}
