@@ -1,0 +1,68 @@
+.sobre-nosotros__container {
+    margin: 2em auto;
+    padding: 2em;
+    width: 90%;
+    max-width: 75rem;     
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+    gap: 1.5em;
+    border: 1px solid black;
+    border-radius: 0.8em;
+    box-shadow: 0 0 2em rgba(255, 255, 255, 0.25);
+}
+
+.sobre-nosotros__title {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    grid-column: 1 / -1; 
+}
+
+.sobre-nosotros__group {
+    padding: 1.5em;
+    border-radius: 0.8em;
+    box-shadow: 0 0 2em rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.sobre-nosotros__group--full {
+    grid-column: 1 / -1; 
+}
+
+.sobre-nosotros__h3 {
+    align-self: flex-start;
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #ffffff33;
+    padding-bottom: 0.2em;
+}
+
+.sobre-nosotros__text {
+    color: #ddd;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.8em;
+}
+
+.sobre-nosotros__text:last-child {
+    margin-bottom: 0;
+}
+
+.fetemba-logo {
+    height: 1.2em;
+    border-radius: 50%;
+}
+
+.sobre-nosotros__content {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
