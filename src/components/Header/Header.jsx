@@ -7,7 +7,7 @@ export function Header() {
         <header>
             <div className="header__layout">
                 <img className="header__img" src={logoAlvear} alt="Escudo de Alvear Club Tenis De Mesa" />
-                <h1 className="header__title">ALVEAR CLUB TENIS DE MESA</h1>
+                <h1 className="header__title">Alvear Club Tenis De Mesa</h1>
                 <button className='header__button'>
                     <Flecha />
                 </button>

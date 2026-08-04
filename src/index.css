@@ -10,7 +10,6 @@ body {
     display: flex;
     flex-direction: column; 
     min-height: 100vh;     
-    margin: 0;
 }
 
 html {
@@ -31,7 +30,7 @@ a {
 /* ----------SCROLLBAR START-------*/
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 0.75em;
 }
 
 ::-webkit-scrollbar-track {
@@ -58,3 +57,9 @@ a {
 }
 
 /* ----------SCROLLBAR END-------*/
+
+@media (max-width: 48) {
+    html {
+        font-size: 14px;
+    }
+}
