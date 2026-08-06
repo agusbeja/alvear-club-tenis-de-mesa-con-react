@@ -26,7 +26,13 @@ export function SobreNosotros() {
                 </h3>
                 <div className="sobre-nosotros__content">
                     <p className="sobre-nosotros__text">
-                    Diego Temperley - Leandro Yamamoto - Nicolas Gibo
+                        Diego Temperley
+                    </p>
+                    <p className="sobre-nosotros__text">
+                        Leandro Yamamoto
+                    </p>
+                    <p className="sobre-nosotros__text">
+                        Nicolas Gibo
                     </p>
                 </div>
             </div>
@@ -73,8 +79,8 @@ export function SobreNosotros() {
                 <div className="sobre-nosotros__content">
                     <p className="sobre-nosotros__text">
                         <a href="https://www.fetemba.org.ar/" target="_blank" rel="noopener noreferrer" className='sobre-nosotros__link'>
-                        <img src={fetembaLogo} alt="fetemba" className="fetemba-logo"/>
-                        FeTeMBA
+                            <img src={fetembaLogo} alt="fetemba" className="fetemba-logo sobre-nosotros__text"/>
+                            FeTemBa
                         </a>
                     </p>
                 </div>
