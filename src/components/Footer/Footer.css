@@ -6,7 +6,6 @@
     gap: 2em;
     height: 10em;
     background-color: #192944;
-    margin-top: 5em;
 }
 
 .footer__redes-container {
@@ -28,7 +27,6 @@
         height: auto;
         padding: 2.5rem 1rem;
         gap: 1.5rem;
-        margin-top: 3rem;
     }
 
     .footer__redes-container {

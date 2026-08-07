@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react'; // 👈 1. Corregido 'useState'
+import { useState, useEffect } from 'react';
 import logoAlvear from '../../assets/img/icon/logoAlvear.png';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
 export function Login({ onClose }) {
@@ -44,7 +45,7 @@ export function Login({ onClose }) {
                         </button>
                     </div>
                     <div className="login__register-container">
-                        <a href="./formulario-registro.html" className="login__register-button">Registrarse</a>
+                        <Link to='/registro' className="login__register-button" onClick={onClose}>Registrarse</Link>
                         <button className="login__register-button" type="submit">Iniciar Sesión</button>
                     </div>
                 </form>            

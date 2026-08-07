@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavHashLink } from 'react-router-hash-link';
 import './NavBar.css'
 import { Login } from '../Login/Login'
 
@@ -26,9 +27,9 @@ export function NavBar() {
                 <span className="nav__hamburger"></span>
             </button>
             <ul className={`nav__list ${isMenuOpen ? 'nav__menu-visible':''}`}>
-                <li className="nav__item"><a href="#inicio" className="nav__link" onClick={handleCloseMenu}>Inicio</a></li>
-                <li className="nav__item"><a href="#sobre-nosotros" className="nav__link" onClick={handleCloseMenu}>Sobre Nosotros</a></li>
-                <li className="nav__item"><a href="#torneos" className="nav__link" onClick={handleCloseMenu}>Torneos</a></li>
+                <li className="nav__item"><NavHashLink smooth to="/#inicio" className="nav__link" onClick={handleCloseMenu}>Inicio</NavHashLink></li>
+                <li className="nav__item"><NavHashLink smooth to="/#sobre-nosotros" className="nav__link" onClick={handleCloseMenu}>Sobre Nosotros</NavHashLink></li>
+                <li className="nav__item"><NavHashLink smooth to="/#torneos" className="nav__link" onClick={handleCloseMenu}>Torneos</NavHashLink></li>
                 <li className="nav__item"><a href="https://www.tenisdemesaparatodos.com/clubes_ampliar.asp?codigo=16"
                     className="nav__link" target="_blank" rel="noopener noreferrer" onClick={handleCloseMenu}>TMT</a></li>
                 <li className="nav__item"><button className="nav__link link--login" onClick={handleLoginClick}>Iniciar
