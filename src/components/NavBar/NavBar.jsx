@@ -5,7 +5,7 @@ import { Login } from '../Login/Login'
 
 
 
-export function NavBar() {
+export function NavBar({usuarioLogueado, setUsuarioLogueado}) {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLoginOpen, setIsLoginOpen] = useState(false);
@@ -35,7 +35,7 @@ export function NavBar() {
                 <li className="nav__item"><button className="nav__link link--login" onClick={handleLoginClick}>Iniciar
                     Sesión</button></li>
             </ul>
-            {isLoginOpen && <Login onClose={handleCloseLogin} />}
+            {isLoginOpen && <Login onClose={handleCloseLogin} setUsuarioLogueado={setUsuarioLogueado}/>}
         </nav>
     )
 }

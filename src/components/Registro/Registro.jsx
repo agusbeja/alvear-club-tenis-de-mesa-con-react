@@ -39,7 +39,7 @@ function validarContrasenia(contrasenia) {
     return (contrasenia.length >= 8 && (/[A-Z]/.test(contrasenia)) && (/\d/.test(contrasenia)) && (/[@$!%*?&]/.test(contrasenia))) 
 }
 
-export function Registro() {
+export function Registro({setUsuarioLogueado}) {
 
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
     
@@ -132,6 +132,11 @@ export function Registro() {
 
         localStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios));
 
+        setUsuarioLogueado(datosFormulario);
+
+        localStorage.setItem('usuarioLogueado', JSON.stringify(datosFormulario))
+
+
         alert(`Registro exitoso! Bienvenido, ${datosFormulario.nombre}!`)
 
         setDatosFormulario({
@@ -146,6 +151,7 @@ export function Registro() {
             contrasenia : ''
         })
     }
+
     return (
         <main className='registro__container'>
             <form className="registro__form" onSubmit={handleSubmit}>
