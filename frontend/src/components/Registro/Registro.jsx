@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import './Registro.css'
+import { useNavigate } from 'react-router-dom';
+import './Registro.css';
 
 function validarCodigo(codigo) {
     return codigo.length > 1 && codigo.length < 10;
@@ -32,52 +33,52 @@ function validarDomicilio(domicilio) {
 }
 
 function validarPais(pais) {
-    return (pais !== "pais")
+    return (pais !== "pais" && pais !== "");
 }
 
 function validarContrasenia(contrasenia) {
-    return (contrasenia.length >= 8 && (/[A-Z]/.test(contrasenia)) && (/\d/.test(contrasenia)) && (/[@$!%*?&]/.test(contrasenia))) 
+    return (contrasenia.length >= 8 && (/[A-Z]/.test(contrasenia)) && (/\d/.test(contrasenia)) && (/[@$!%*?&]/.test(contrasenia)));
 }
 
-export function Registro({setUsuarioLogueado}) {
+export function Registro({ setUsuarioLogueado }) {
+    const navigate = useNavigate();
 
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-    
-        const changePasswordVisibility = (e) => {
-            e.preventDefault();
-            setIsPasswordVisible(!isPasswordVisible);
-        };
+
+    const changePasswordVisibility = (e) => {
+        e.preventDefault();
+        setIsPasswordVisible(!isPasswordVisible);
+    };
 
     const [datosFormulario, setDatosFormulario] = useState({
-        codigo : '',
-        nombre : '',
-        apellido : '',
-        fechaNacimiento : '',
-        email : '',
-        telefono : '',
-        domicilio : '',
-        pais : '',
-        contrasenia : ''
-    })
+        codigo: '',
+        nombre: '',
+        apellido: '',
+        fechaNacimiento: '',
+        email: '',
+        telefono: '',
+        domicilio: '',
+        pais: '',
+        contrasenia: ''
+    });
 
     const handleChange = (e) => {
         setDatosFormulario({
             ...datosFormulario,
             [e.target.name]: e.target.value
-        })
-        console.log(datosFormulario)
-    }   
+        });
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         if (!validarCodigo(datosFormulario.codigo)) {
-            alert("Ingrese un codigo correcto.")
+            alert("Ingrese un codigo correcto.");
             return;
         }
 
         if (!validarNombre(datosFormulario.nombre)) {
-            alert('Ingrese un nombre válido.')
+            alert('Ingrese un nombre válido.');
             return;
         }
 
@@ -92,39 +93,39 @@ export function Registro({setUsuarioLogueado}) {
         }
 
         if (!validarEmail(datosFormulario.email)) {
-            alert("Ingrese un email válido.")
+            alert("Ingrese un email válido.");
             return;
         }
 
         if (!validarTelefono(datosFormulario.telefono)) {
-            alert("Ingrese un teléfono válido.")
+            alert("Ingrese un teléfono válido.");
             return;
         }
 
         if (!validarDomicilio(datosFormulario.domicilio)) {
-            alert("Ingrese un domicilio válido")
+            alert("Ingrese un domicilio válido");
             return;
         }
 
         if (!validarPais(datosFormulario.pais)) {
-            alert("Ingrese un país válido")
+            alert("Ingrese un país válido");
             return;
         }
 
         if (!validarContrasenia(datosFormulario.contrasenia)) {
-            alert("La contraseña debe tener al menos 8 caracteres, 1 mayúscula, 1 número, 1 símbolo")
+            alert("La contraseña debe tener al menos 8 caracteres, 1 mayúscula, 1 número, 1 símbolo");
             return;
         }
 
         let listaUsuarios = JSON.parse(localStorage.getItem('listaUsuarios')) || [];
 
         if (listaUsuarios.find(usuario => usuario.codigo === datosFormulario.codigo)) {
-            alert(`Ya existe una cuenta con el código ${datosFormulario.codigo}`)
+            alert(`Ya existe una cuenta con el código ${datosFormulario.codigo}`);
             return;
         }
 
         if (listaUsuarios.find(usuario => usuario.email === datosFormulario.email)) {
-            alert(`Ya existe una cuenta con el email ${datosFormulario.email}`)
+            alert(`Ya existe una cuenta con el email ${datosFormulario.email}`);
             return;
         }
 
@@ -134,23 +135,12 @@ export function Registro({setUsuarioLogueado}) {
 
         setUsuarioLogueado(datosFormulario);
 
-        localStorage.setItem('usuarioLogueado', JSON.stringify(datosFormulario))
+        localStorage.setItem('usuarioLogueado', JSON.stringify(datosFormulario));
 
+        alert(`Registro exitoso! Bienvenido, ${datosFormulario.nombre}!`);
 
-        alert(`Registro exitoso! Bienvenido, ${datosFormulario.nombre}!`)
-
-        setDatosFormulario({
-            codigo : '',
-            nombre : '',
-            apellido : '',
-            fechaNacimiento : '',
-            email : '',
-            telefono : '',
-            domicilio : '',
-            pais : '',
-            contrasenia : ''
-        })
-    }
+        navigate('/');
+    };
 
     return (
         <main className='registro__container'>
@@ -186,7 +176,7 @@ export function Registro({setUsuarioLogueado}) {
                 </div>
                 <div className="registro__group">
                     <label htmlFor="pais" className="registro__label">País *</label>
-                    <select name="pais" id="pais" defaultValue="" required value={datosFormulario.pais} onChange={handleChange}>
+                    <select name="pais" id="pais" required value={datosFormulario.pais} onChange={handleChange}>
                         <option value="" disabled>Selecciona un país:</option>
                         <option value="argentina">Argentina</option>
                         <option value="bolivia">Bolivia</option>
@@ -216,5 +206,5 @@ export function Registro({setUsuarioLogueado}) {
                 </button>
             </form>
         </main>
-    )
+    );
 }

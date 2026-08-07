@@ -11,6 +11,7 @@ import { Galeria } from './components/Galeria/Galeria'
 import { Torneos } from './components/Torneos/Torneos'
 import { Footer } from './components/Footer/Footer'
 import { Registro } from './components/Registro/Registro'
+import { Perfil } from "./components/Perfil/Perfil"
 
 function App() {
 
@@ -38,9 +39,15 @@ function App() {
         <Route path="/registro" element={
           <>
             <NavBar usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}/> 
-            <Registro setUsuarioLogueado={setUsuarioLogueado}/>
+            <Registro usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}/>
           </>
         } />
+        <Route path="/perfil" element={
+          <>
+            <NavBar usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}/> 
+            <Perfil usuarioLogueado={usuarioLogueado} setUsuarioLogueado={setUsuarioLogueado}/>
+          </>
+        }/>
       </Routes>
       <Footer />
     </>
