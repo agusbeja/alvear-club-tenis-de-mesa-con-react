@@ -7,16 +7,16 @@ import jakarta.persistence.*;
 public class Categoria {
     @Id // Marca que esta es la Clave Primaria (PK)
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Hace que el ID sea autoincremental (1, 2, 3...)
-    private Long cateogiraId;
+    private Long categoriaId;
     private String nombre;
     private int puntajeMinimo;
     private int puntajeMaximo;
     
-    public Long getCateogiraId() {
-        return cateogiraId;
+    public Long getCategoriaId() {
+        return categoriaId;
     }
-    public void setCateogiraId(Long cateogiraId) {
-        this.cateogiraId = cateogiraId;
+    public void setCategoriaId(Long categoriaId) {
+        this.categoriaId = categoriaId;
     }
     public String getNombre() {
         return nombre;
