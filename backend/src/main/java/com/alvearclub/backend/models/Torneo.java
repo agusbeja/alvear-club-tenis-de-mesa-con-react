@@ -16,7 +16,14 @@ public class Torneo {
     private LocalDate fecha;
     private LocalTime horario;
     private BigDecimal precio;
+    private int cuposDisponibles;
     
+    public int getCuposDisponibles() {
+        return cuposDisponibles;
+    }
+    public void setCuposDisponibles(int cuposDisponibles) {
+        this.cuposDisponibles = cuposDisponibles;
+    }
     public LocalTime getHorario() {
         return horario;
     }

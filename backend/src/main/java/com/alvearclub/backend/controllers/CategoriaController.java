@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController // Le dice a Spring que esta clase va a responder a pedidos web (API REST)
 @RequestMapping("/api/categorias") // Esta es la URL base para este controlador
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 public class CategoriaController {
 
     private final CategoriaService categoriaService;
