@@ -3,7 +3,6 @@ package com.alvearclub.backend.services;
 import com.alvearclub.backend.models.Categoria;
 import com.alvearclub.backend.repositories.CategoriaRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service

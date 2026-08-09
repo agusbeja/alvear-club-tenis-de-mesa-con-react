@@ -1,6 +1,8 @@
 package com.alvearclub.backend.models;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 import jakarta.persistence.*;
 
@@ -12,6 +14,21 @@ public class Torneo {
     private Long torneoId;
     private String nombre;
     private LocalDate fecha;
+    private LocalTime horario;
+    private BigDecimal precio;
+    
+    public LocalTime getHorario() {
+        return horario;
+    }
+    public void setHorario(LocalTime horario) {
+        this.horario = horario;
+    }
+    public BigDecimal getPrecio() {
+        return precio;
+    }
+    public void setPrecio(BigDecimal precio) {
+        this.precio = precio;
+    }
     @ManyToOne
     @JoinColumn(name = "categoria_id_fk")
     private Categoria categoria;

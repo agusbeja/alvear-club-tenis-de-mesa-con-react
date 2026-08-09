@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "partido_jugador")
-public class Partido_Jugador {
+public class PartidoJugador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long partidoJugadorId;
