@@ -15,12 +15,14 @@ public class Inscripcion {
     @JoinColumn(name = "jugador_id_fk")
     private Jugador jugador;
     @ManyToOne
-    @JoinColumn(name = "torneo_id_fk")
-    private Torneo torneo;
+    @JoinColumn(name = "torneo_categoria_id_fk")
+    private TorneoCategoria torneoCategoria;
     @ManyToOne
-    @JoinColumn(name = "grupo_id_fk")
+    @JoinColumn(name = "grupo_id_fk", nullable = true)
     private Grupo grupo;
-    
+
+
+
     public Long getInscripcionId() {
         return inscripcionId;
     }
@@ -45,16 +47,16 @@ public class Inscripcion {
     public void setJugador(Jugador jugador) {
         this.jugador = jugador;
     }
-    public Torneo getTorneo() {
-        return torneo;
+    public TorneoCategoria getTorneoCategoria() {
+        return torneoCategoria;
     }
-    public void setTorneo(Torneo torneo) {
-        this.torneo = torneo;
+    public void setTorneoCategoria(TorneoCategoria torneoCategoria) {
+        this.torneoCategoria = torneoCategoria;
     }
     public Grupo getGrupo() {
         return grupo;
     }
     public void setGrupo(Grupo grupo) {
         this.grupo = grupo;
-    }
+    }    
 }

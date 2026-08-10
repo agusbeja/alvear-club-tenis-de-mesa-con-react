@@ -1,8 +1,6 @@
 package com.alvearclub.backend.models;
 
 import java.time.LocalDate;
-import java.util.List;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity
@@ -13,9 +11,6 @@ public class Torneo {
     private Long torneoId;
     private String nombre;
     private LocalDate fecha;
-    @OneToMany(mappedBy = "torneo", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties("torneo")
-    private List<TorneoCategoria> torneoCategorias;
 
     public Long getTorneoId() {
         return torneoId;
@@ -34,12 +29,5 @@ public class Torneo {
     }
     public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
-    }
-
-    public List<TorneoCategoria> getTorneoCategorias() {
-        return torneoCategorias;
-    }
-    public void setTorneoCategorias(List<TorneoCategoria> torneoCategorias) {
-        this.torneoCategorias = torneoCategorias;
     }
 }

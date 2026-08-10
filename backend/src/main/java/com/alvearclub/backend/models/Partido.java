@@ -8,12 +8,18 @@ public class Partido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long partidoId;
+    @Column(nullable = false)
     private String fase;
+    @Column(nullable = false)
     private String estado;
+    private int setsGanadosJ1;
+    private int setsGanadosJ2;
     @ManyToOne
-    @JoinColumn(name = "torneo_id_fk")
-    private Torneo torneo;
-    
+    @JoinColumn(name = "grupo_id_fk", nullable = true)
+    private Grupo grupo;
+
+
+
     public Long getPartidoId() {
         return partidoId;
     }
@@ -32,10 +38,24 @@ public class Partido {
     public void setEstado(String estado) {
         this.estado = estado;
     }
-    public Torneo getTorneo() {
-        return torneo;
+    public int getSetsGanadosJ1() {
+        return setsGanadosJ1;
     }
-    public void setTorneo(Torneo torneo) {
-        this.torneo = torneo;
+    public void setSetsGanadosJ1(int setsGanadosJ1) {
+        this.setsGanadosJ1 = setsGanadosJ1;
     }
+    public int getSetsGanadosJ2() {
+        return setsGanadosJ2;
+    }
+    public void setSetsGanadosJ2(int setsGanadosJ2) {
+        this.setsGanadosJ2 = setsGanadosJ2;
+    }
+    public Grupo getGrupo() {
+        return grupo;
+    }
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
+    }
+    
+    
 }

@@ -20,6 +20,7 @@ public class TorneoCategoria {
     @ManyToOne
     @JoinColumn(name = "categoria_id_fk")
     private Categoria categoria;
+    
     public Long getTorneoCategoriaId() {
         return torneoCategoriaId;
     }
@@ -56,4 +57,5 @@ public class TorneoCategoria {
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
+
 }

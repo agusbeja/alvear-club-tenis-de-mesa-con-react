@@ -9,7 +9,9 @@ public class Set {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long setId;
     private int numeroSet;
+    @Column(nullable = true)
     private int puntosJ1;
+    @Column(nullable = true)
     private int puntosJ2;
     @ManyToOne
     @JoinColumn(name = "partido_id_fk")

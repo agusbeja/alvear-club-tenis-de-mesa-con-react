@@ -8,6 +8,7 @@ public class PartidoJugador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long partidoJugadorId;
+    private int numeroJugador;
     @ManyToOne
     @JoinColumn(name = "partido_id_fk")
     private Partido partido;
@@ -15,11 +16,19 @@ public class PartidoJugador {
     @JoinColumn(name = "jugador_id_fk")
     private Jugador jugador;
 
+
+    
     public Long getPartidoJugadorId() {
         return partidoJugadorId;
     }
     public void setPartidoJugadorId(Long partidoJugadorId) {
         this.partidoJugadorId = partidoJugadorId;
+    }
+    public int getNumeroJugador() {
+        return numeroJugador;
+    }
+    public void setNumeroJugador(int numeroJugador) {
+        this.numeroJugador = numeroJugador;
     }
     public Partido getPartido() {
         return partido;

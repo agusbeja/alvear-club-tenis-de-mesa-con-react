@@ -10,8 +10,9 @@ public class Grupo {
     private Long grupoId;
     private String nombre;
     @ManyToOne
-    @JoinColumn(name = "torneo_id_fk")
-    private Torneo torneo;
+    @JoinColumn(name = "torneo_categoria_id_fk")
+    private TorneoCategoria torneoCategoria;
+
 
     public Long getGrupoId() {
         return grupoId;
@@ -25,10 +26,10 @@ public class Grupo {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public Torneo getTorneo() {
-        return torneo;
+    public TorneoCategoria getTorneoCategoria() {
+        return torneoCategoria;
     }
-    public void setTorneo(Torneo torneo) {
-        this.torneo = torneo;
+    public void setTorneoCategoria(TorneoCategoria torneoCategoria) {
+        this.torneoCategoria = torneoCategoria;
     }
 }

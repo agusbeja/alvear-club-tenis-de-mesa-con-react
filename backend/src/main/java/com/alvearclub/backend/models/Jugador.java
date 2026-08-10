@@ -16,19 +16,22 @@ public class Jugador {
     private LocalDate fechaNacimiento;
     private String email;
     private String telefono;
-    private LocalDate fechaUltimaActualizacion;
-    private String nacionalidad;
     private String domicilioCalle;
     private String domicilioAltura;
     private String domicilioDpto;
-    private String domicilioZona;
+    private String domicilioBarrio;
+    private String domicilioLocalidad;
     private String domicilioCp;
+    private String nacionalidad;
+    private LocalDate fechaUltimaActualizacion;
     private int puntaje;
     private String manoHabil;
     @ManyToOne
     @JoinColumn(name = "categoria_id_fk")
     private Categoria categoria;
+
     
+
     public Long getJugadorId() {
         return jugadorId;
     }
@@ -71,18 +74,6 @@ public class Jugador {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    public LocalDate getFechaUltimaActualizacion() {
-        return fechaUltimaActualizacion;
-    }
-    public void setFechaUltimaActualizacion(LocalDate fechaUltimaActualizacion) {
-        this.fechaUltimaActualizacion = fechaUltimaActualizacion;
-    }
-    public String getNacionalidad() {
-        return nacionalidad;
-    }
-    public void setNacionalidad(String nacionalidad) {
-        this.nacionalidad = nacionalidad;
-    }
     public String getDomicilioCalle() {
         return domicilioCalle;
     }
@@ -101,17 +92,35 @@ public class Jugador {
     public void setDomicilioDpto(String domicilioDpto) {
         this.domicilioDpto = domicilioDpto;
     }
-    public String getDomicilioZona() {
-        return domicilioZona;
+    public String getDomicilioBarrio() {
+        return domicilioBarrio;
     }
-    public void setDomicilioZona(String domicilioZona) {
-        this.domicilioZona = domicilioZona;
+    public void setDomicilioBarrio(String domicilioBarrio) {
+        this.domicilioBarrio = domicilioBarrio;
+    }
+    public String getDomicilioLocalidad() {
+        return domicilioLocalidad;
+    }
+    public void setDomicilioLocalidad(String domicilioLocalidad) {
+        this.domicilioLocalidad = domicilioLocalidad;
     }
     public String getDomicilioCp() {
         return domicilioCp;
     }
     public void setDomicilioCp(String domicilioCp) {
         this.domicilioCp = domicilioCp;
+    }
+    public String getNacionalidad() {
+        return nacionalidad;
+    }
+    public void setNacionalidad(String nacionalidad) {
+        this.nacionalidad = nacionalidad;
+    }
+    public LocalDate getFechaUltimaActualizacion() {
+        return fechaUltimaActualizacion;
+    }
+    public void setFechaUltimaActualizacion(LocalDate fechaUltimaActualizacion) {
+        this.fechaUltimaActualizacion = fechaUltimaActualizacion;
     }
     public int getPuntaje() {
         return puntaje;
