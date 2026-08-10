@@ -3,7 +3,6 @@ package com.alvearclub.backend.controllers;
 import com.alvearclub.backend.models.Categoria;
 import com.alvearclub.backend.services.CategoriaService;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController // Le dice a Spring que esta clase va a responder a pedidos web (API REST)

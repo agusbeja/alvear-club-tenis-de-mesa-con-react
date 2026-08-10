@@ -1,9 +1,8 @@
 package com.alvearclub.backend.models;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalTime;
-
+import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity
@@ -14,32 +13,10 @@ public class Torneo {
     private Long torneoId;
     private String nombre;
     private LocalDate fecha;
-    private LocalTime horario;
-    private BigDecimal precio;
-    private int cuposDisponibles;
-    
-    public int getCuposDisponibles() {
-        return cuposDisponibles;
-    }
-    public void setCuposDisponibles(int cuposDisponibles) {
-        this.cuposDisponibles = cuposDisponibles;
-    }
-    public LocalTime getHorario() {
-        return horario;
-    }
-    public void setHorario(LocalTime horario) {
-        this.horario = horario;
-    }
-    public BigDecimal getPrecio() {
-        return precio;
-    }
-    public void setPrecio(BigDecimal precio) {
-        this.precio = precio;
-    }
-    @ManyToOne
-    @JoinColumn(name = "categoria_id_fk")
-    private Categoria categoria;
-    
+    @OneToMany(mappedBy = "torneo", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("torneo")
+    private List<TorneoCategoria> torneoCategorias;
+
     public Long getTorneoId() {
         return torneoId;
     }
@@ -58,10 +35,11 @@ public class Torneo {
     public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
-    public Categoria getCategoria() {
-        return categoria;
+
+    public List<TorneoCategoria> getTorneoCategorias() {
+        return torneoCategorias;
     }
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setTorneoCategorias(List<TorneoCategoria> torneoCategorias) {
+        this.torneoCategorias = torneoCategorias;
     }
 }
