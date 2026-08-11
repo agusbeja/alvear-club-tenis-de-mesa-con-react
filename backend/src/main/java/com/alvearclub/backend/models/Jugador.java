@@ -10,10 +10,12 @@ public class Jugador {
     @Id // Marca que esta es la Clave Primaria (PK)
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Hace que el ID sea autoincremental (1, 2, 3...)
     private Long jugadorId;
+    @Column(unique = true)
     private String codigo;
     private String nombre;
     private String apellido;
     private LocalDate fechaNacimiento;
+    @Column(unique = true)
     private String email;
     private String telefono;
     private String domicilioCalle;
